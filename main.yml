@@ -7,3 +7,4 @@
   handlers:
     - include: nginx/handlers.yml
     - include: docker/handlers.yml
+    - include: nexus/handlers.yml
