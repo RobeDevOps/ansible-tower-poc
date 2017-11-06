@@ -4,5 +4,5 @@
   notify:
     - start docker
 
-- name: Add ansible user to docker group
-  command: usermod -aG docker {{ ansible_ssh_user }}
+- name: Add ansible ssh user to docker group
+  user: name={{ansible_ssh_user}} groups=docker
