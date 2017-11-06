@@ -6,5 +6,13 @@
   docker_image: 
     name: sonatype/nexus3
     state: present
-  notify:
-    - start nexus
+  # notify:
+  #   - start nexus
+
+- name: start nexus
+  docker_container:
+    name: nexus-repository
+    image: sonatype/nexus3
+    state: started
+    exposed_ports: 
+      - 8080
