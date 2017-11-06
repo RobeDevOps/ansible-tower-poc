@@ -1,0 +1,8 @@
+---
+- hosts: webservers
+  tasks:
+    - include: nginx/install-nginx.yml
+    - include: docker/install-docker.yml
+  handlers:
+    - include: nginx/handlers.yml
+    - include: docker/handlers.yml
