@@ -3,4 +3,4 @@
   tasks:
     - include: nginx/install-nginx.yml
   handlers:
-    - include nginx/handlers.yml
+    - include: nginx/handlers.yml
