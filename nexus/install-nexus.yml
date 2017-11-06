@@ -14,5 +14,5 @@
     name: nexus-repository
     image: sonatype/nexus3
     state: started
-    exposed_ports: 
-      - 8081
+    published_ports:
+      - 8080:8080
