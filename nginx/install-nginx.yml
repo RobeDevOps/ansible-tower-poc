@@ -1,16 +1,12 @@
 ---
+- include: handlers.yml
+
 - name: Install nginx server
-  yum: 
-    name: nginx
-    state: present
+  yum: name=nginx state=present
 
 - name: Create index.html file
   copy:
     src: resources/index.html
     dest: /usr/share/nginx/html/index.html
-    notify: 
-      - Restart Nginx
-
-- handlers:
-    - name: Restart Nginx
-      service: name=nginx state=restarted
+  notify: 
+    - restart nginx
