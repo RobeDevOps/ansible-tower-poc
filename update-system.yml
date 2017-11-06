@@ -1,7 +1,4 @@
 ---
 - hosts: webservers
   tasks:
-  - name: Install nginx server
-    yum: 
-      name: nginx
-      state: present
+    - include: install-nginx.yml
