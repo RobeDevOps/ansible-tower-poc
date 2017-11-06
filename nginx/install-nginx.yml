@@ -8,3 +8,9 @@
   copy:
     src: resources/index.html
     dest: /usr/share/nginx/html/index.html
+    notify: 
+      - Restart Nginx
+
+- handlers:
+    - name: Restart Nginx
+      service: name=nginx state=restarted
