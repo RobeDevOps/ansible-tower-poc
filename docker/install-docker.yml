@@ -1,11 +1,13 @@
 ---
 - name: Download docker install script
   command: curl -fsSL get.docker.com -o get-docker.sh
-  chdir: /tmp
+  args:
+    chdir: /tmp
 
 - name: Install docker
   command: sh get-docker.sh
-  chdir: /tmp
+  args:
+    chdir: /tmp
   notify:
     - start docker
 
