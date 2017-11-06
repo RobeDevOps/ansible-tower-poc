@@ -1,0 +1,5 @@
+---
+- hosts: webservers
+  tasks:
+  - name: ensure system is update
+    command: yum update -y
