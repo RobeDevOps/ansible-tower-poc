@@ -1,0 +1,13 @@
+---
+- name: Pull Image Nexus
+  docker_image: 
+    name: sonatype/nexus3
+    state: present
+
+- name: Create Nexus repository
+  docker_container:
+    name: nexus-repository
+    image: sonatype/nexus3
+    state: present
+    exposed_ports: 
+      - 8080

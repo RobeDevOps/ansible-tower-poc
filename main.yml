@@ -3,6 +3,7 @@
   tasks:
     - include: nginx/install-nginx.yml
     - include: docker/install-docker.yml
+    - include: nexus/install-nexus.yml
   handlers:
     - include: nginx/handlers.yml
     - include: docker/handlers.yml
