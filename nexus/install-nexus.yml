@@ -1,4 +1,7 @@
 ---
+- name: Install docker pip dependency
+  command: pip install docker-py
+
 - name: Pull Image Nexus
   docker_image: 
     name: sonatype/nexus3
