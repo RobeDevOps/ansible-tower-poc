@@ -1,4 +1,4 @@
 ---
 - hosts: webservers
   tasks:
-    - include: install-nginx.yml
+    - include: nginx/install-nginx.yml

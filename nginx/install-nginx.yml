@@ -4,7 +4,7 @@
     name: nginx
     state: present
 
-- name: Create index file
+- name: Create index.html file
   copy:
-    src: /resources/index.html
+    src: resources/index.html
     dest: /usr/share/nginx/html/index.html
