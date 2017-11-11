@@ -1,5 +1,8 @@
 ---
 - hosts: all
+  become: true
+  roles:
+    - robert.php
   tasks:
     - name: I am able to connect
       ping:

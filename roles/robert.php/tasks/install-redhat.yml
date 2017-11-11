@@ -1,0 +1,16 @@
+---
+- name: Update the apt cache
+  yum: 
+    update_cache: yes 
+    cache_valid_time: 3600
+
+- name: Install PHP
+  yum: name={{item}} state=installed
+  with_items:
+  - php
+  - php-fpm
+  - php-mysql
+  - php-xml
+
+- name: Remove apache2
+  yum: name={{ apache2_package_name }} state=removed
