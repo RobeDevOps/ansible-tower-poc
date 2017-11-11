@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: I am able to connect
+      ping:
