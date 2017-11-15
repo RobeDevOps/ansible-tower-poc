@@ -1,2 +1,3 @@
 ---
-# tasks file for robert.wordpress
+- name: Install wordpress
+  debug: msg="Installing wordpress after dependencies resolution"
