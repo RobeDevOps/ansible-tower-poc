@@ -4,8 +4,13 @@
   tasks:
     - name: I am able to connect
       ping:
-    - name: Install git
-      yum: name=php state=installed
+    - name: Install php packages
+      yum: name={{item}} state=installed
+      with_items:
+      - php
+      - php-fpm
+      - php-mysql
+      - php-xml
 
   # roles:
   #   - demo.php
