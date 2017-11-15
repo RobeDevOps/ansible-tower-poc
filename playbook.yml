@@ -4,5 +4,8 @@
   tasks:
     - name: I am able to connect
       ping:
+  tasks:
+    - name: Install git
+      yum: name=git state=installed
   roles:
     - demo.php
