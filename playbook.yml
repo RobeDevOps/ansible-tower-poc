@@ -6,6 +6,7 @@
       ping:
   tasks:
     - name: Install git
-      yum: name=git state=installed
-  roles:
-    - demo.php
+      yum: name=php state=installed
+      
+  # roles:
+  #   - demo.php
