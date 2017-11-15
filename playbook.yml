@@ -3,3 +3,5 @@
   tasks:
     - name: I am able to connect
       ping:
+    - name: Apche version
+      debug: msg="Apache version installed {{ apache_version }}"
