@@ -4,9 +4,8 @@
     name: "*"
     update_cache: yes
     
-
 - name: Install PHP
-  yum: name="{{item}}" state=installed 
+  yum: name="{{item}}" state=present 
   with_items:
     - php
     - php-fpm
