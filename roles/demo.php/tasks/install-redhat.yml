@@ -6,9 +6,7 @@
     
 
 - name: Install PHP
-  yum: 
-    name: "{{item}}" 
-    state: installed 
+  yum: name="{{item}}" state=installed 
   with_items:
   - php
   - php-fpm
