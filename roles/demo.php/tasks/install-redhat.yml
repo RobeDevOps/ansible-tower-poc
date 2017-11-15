@@ -1,8 +1,6 @@
 ---
 - name: Update the apt cache
-  yum: 
-    name: "*"
-    update_cache: yes
+  yum: name="*" update_cache=yes
     
 - name: Install PHP
   yum: name="{{ item }}" state=installed 
