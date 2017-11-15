@@ -1,2 +1,7 @@
 ---
 apache2_package_name: "httpd"
+php_packages:
+  - php
+  - php-fpm
+  - php-mysql
+  - php-xml
