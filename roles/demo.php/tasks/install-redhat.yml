@@ -3,8 +3,12 @@
   yum: name="*" update_cache=yes
     
 - name: Install PHP
-  yum: name="{{ item }}" state=installed 
-  with_items: "{{ php_packages }}"
-
+  yum: name="{{item}}" state=installed 
+  with_items:
+    - php
+    - php-fpm
+    - php-mysql
+    - php-xml
+      
 - name: Remove apache2
   yum: name={{ apache2_package_name }} state=removed
