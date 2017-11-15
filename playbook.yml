@@ -6,7 +6,7 @@
     yum: name="*" update_cache=yes
       
   - name: Install PHP
-    yum: name=php state=installed
+    yum: name=php.x86_64 state=installed
   
   - name: Install php-fpm
     yum: name=php-fpm state=installed 
