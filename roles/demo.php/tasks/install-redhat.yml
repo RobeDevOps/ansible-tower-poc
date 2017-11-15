@@ -1,8 +1,7 @@
 ---
 - name: Update the apt cache
   yum: 
-    update_cache: yes 
-    cache_valid_time: 3600
+    update_cache: yes
 
 - name: Install PHP
   yum: name={{item}} state=installed
