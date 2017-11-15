@@ -6,12 +6,16 @@
     yum: name="*" update_cache=yes
       
   - name: Install PHP
-    yum: name={{item}} state=installed 
-    with_items:
-      - php
-      - php-fpm
-      - php-mysql
-      - php-xml
+    yum: name=php state=installed
+  
+  - name: Install php-fpm
+    yum: name=php-fpm state=installed 
+
+  - name: Install php-mysql
+    yum: name=php-mysql state=installed 
+
+  - name: Install php-xml
+    yum: name=php-xml state=installed
         
   - name: Remove apache2
     yum: name=httpd state=removed
